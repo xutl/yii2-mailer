@@ -1,9 +1,8 @@
 <?php
 
-namespace xutl\mailgunmailer;
+namespace xutl\mailer;
 
 use yii\mail\BaseMessage;
-use Mailgun\Messages\MessageBuilder;
 
 /**
  * Message implements a message class based on Mailgun.

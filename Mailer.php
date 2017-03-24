@@ -1,6 +1,6 @@
 <?php
 
-namespace xutl\mailgunmailer;
+namespace xutl\mailer;
 
 use Yii;
 use yii\di\Instance;
