@@ -5,13 +5,12 @@ namespace xutl\mailer;
 use yii\mail\BaseMessage;
 
 /**
- * Message implements a message class based on Mailgun.
+ * Message implements a message class based on Queue.
  *
  *
  * @method Mailer getMailer() returns mailer instance.
  *
  *
- * @author Katanyoo Ubalee <ublee.k@gmail.com>
  * @author XU TL <xutl@gmail.com>
  */
 class Message extends BaseMessage

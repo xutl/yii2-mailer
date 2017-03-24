@@ -9,7 +9,7 @@ use yii\mail\BaseMailer;
 use xutl\mq\MessageQueue;
 
 /**
- * Mailer implements a mailer based on Mailgun.
+ * Mailer implements a mailer based on Message Queue.
  *
  * To use Mailer, you should configure it in the application configuration like the following,
  *
@@ -23,6 +23,7 @@ use xutl\mq\MessageQueue;
  *     ...
  * ],
  * ~~~
+ * @author XU TL <xutl@gmail.com>
  */
 class Mailer extends BaseMailer
 {
