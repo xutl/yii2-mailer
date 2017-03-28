@@ -67,4 +67,27 @@ class Mailer extends BaseMailer
         Yii::info('Response : ' . print_r($response, true), __METHOD__);
         return true;
     }
+
+    /**
+     * Sends multiple messages at once.
+     *
+     * The default implementation simply calls [[send()]] multiple times.
+     * Child classes may override this method to implement more efficient way of
+     * sending multiple messages.
+     *
+     * @param array $messages list of email messages, which should be sent.
+     * @return int number of messages that are successfully sent.
+     */
+    public function sendMultiple(array $messages)
+    {
+        $successCount = 0;
+        $queue = $this->mq->getQueueRef($this->queue);
+        $m = [];
+        foreach ($messages as $message) {
+            $m[] = $message->getMessage();
+            $successCount++;
+        }
+        $queue->batchSendMessage($m);
+        return $successCount;
+    }
 }
