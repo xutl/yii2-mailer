@@ -34,7 +34,7 @@ class Mailer extends BaseMailer
      */
     public $messageClass = 'xutl\mailer\Message';
 
-    public $mq;
+    public $mq = 'queue';
 
     public $queue;
 
@@ -45,9 +45,6 @@ class Mailer extends BaseMailer
     public function init()
     {
         parent::init();
-        if (empty ($this->mq)) {
-            throw new InvalidConfigException ('The "mq" property must be set.');
-        }
         if (empty ($this->queue)) {
             throw new InvalidConfigException ('The "queue" property must be set.');
         }
