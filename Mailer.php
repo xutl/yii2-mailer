@@ -6,7 +6,7 @@ use Yii;
 use yii\di\Instance;
 use yii\base\InvalidConfigException;
 use yii\mail\BaseMailer;
-use xutl\mq\MessageQueue;
+use xutl\mq\ClientInterface;
 
 /**
  * Mailer implements a mailer based on Message Queue.
@@ -48,7 +48,7 @@ class Mailer extends BaseMailer
         if (empty ($this->queue)) {
             throw new InvalidConfigException ('The "queue" property must be set.');
         }
-        $this->mq = Instance::ensure($this->mq, MessageQueue::className());
+        $this->mq = Instance::ensure($this->mq, ClientInterface::class);
 
     }
 
