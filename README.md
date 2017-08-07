@@ -13,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist xutl/yii2-mailer "*"
+php composer.phar require --prefer-dist xutl/yii2-mailer
 ```
 
 or add
 
 ```
-"xutl/yii2-mailer": "*"
+"xutl/yii2-mailer": "~1.0.0"
 ```
 
 to the require section of your `composer.json` file.
