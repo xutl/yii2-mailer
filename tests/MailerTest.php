@@ -1,11 +1,11 @@
 <?php
 
-namespace xutlunit\mailer;
+namespace xutlunit\extensions\mailer;
 
 use Yii;
 use xutl\mailer\Mailer;
 
-Yii::setAlias('@xutl\mailer', __DIR__ . '/../../../../extensions/swiftmailer');
+Yii::setAlias('@xutl/mailer', __DIR__ . '/../../../../extensions/swiftmailer');
 
 class MailerTest extends TestCase
 {

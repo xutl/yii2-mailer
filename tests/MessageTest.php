@@ -1,6 +1,6 @@
 <?php
 
-namespace xutlunit\extensions\swiftmailer;
+namespace xutlunit\extensions\mailer;
 
 use Yii;
 use yii\helpers\FileHelper;
@@ -48,7 +48,7 @@ class MessageTest extends TestCase
      */
     protected function getTestFilePath()
     {
-        return Yii::getAlias('@yiiunit/extensions/swiftmailer/runtime') . DIRECTORY_SEPARATOR . basename(get_class($this)) . '_' . getmypid();
+        return Yii::getAlias('@xutlunit/extensions/mailer/runtime') . DIRECTORY_SEPARATOR . basename(get_class($this)) . '_' . getmypid();
     }
 
     /**
