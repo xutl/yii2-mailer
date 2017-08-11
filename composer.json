@@ -8,7 +8,7 @@
     "mailer",
     "queue"
   ],
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "authors": [
     {
       "name": "XUTL",
